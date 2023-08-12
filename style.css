@@ -40,23 +40,29 @@ body {
     color: var(--color01);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 50%;
     max-width: 500px;
     min-width: 250px;
-    height: 200px;
+    height: 150px;
     margin-top: 100px;
-    padding: 20px;
+    padding: 0px 5px;
     border-radius: 20px;
     animation: modal .4s;
 }
 
-.popup > p {
+.popup  p {
     text-align: center;
+}
+
+.popup h1 {
+    font-size: medium;
 }
 
 #openBt {
     font-size: medium;
+    font-weight: 600;
     width: 75px;
     margin-bottom: 20px;
     background-color: var(--color01);
@@ -75,17 +81,14 @@ body {
 
 #closeBt {
     width: 75px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: var(--color01);
     color: var(--color02);
     border: none;
     border-radius: 15px;
     padding: 5px;
     transition: 0.3s ease-in-out;
-}
-
-#closeBt {
-    transform: scale(1.1);
+    font-weight: 600;
 }
 
 .active {
