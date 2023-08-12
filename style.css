@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root {
+    --color01: #f0f8ff;
+    --color02: #1e1e1e; 
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #800080, #a62b2b);
+}
+
+.popup-container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    position: fixed;
+}
+
+.popup {
+    /*glass effect*/
+    background: #ffffff2b;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px #0000001a;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /*end glass effect values*/
+    border: 1px solid #ffffff2e;
+    color: var(--color01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 500px;
+    min-width: 250px;
+    height: 200px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    animation: modal .4s;
+}
+
+.popup > p {
+    text-align: center;
+}
+
+#openBt {
+    font-size: medium;
+    width: 75px;
+    margin-bottom: 20px;
+    background-color: var(--color01);
+    color: var(--color02);
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+
+#openBt:hover {
+    transform: scale(1.1);
+    background-color: #dbdbdb;
+}
+
+#closeBt {
+    width: 75px;
+    margin-top: 20px;
+    background-color: var(--color01);
+    color: var(--color02);
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#closeBt {
+    transform: scale(1.1);
+}
+
+.active {
+    display: flex;
+}
+
+/*popup animation*/
+
+.active .popup {
+    animation: popup .4s;
+}
+/*animation*/
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    } to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
